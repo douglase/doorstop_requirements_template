@@ -1,0 +1,15 @@
+active: true
+additional notes: null
+derived: false
+level: 1
+links:
+- Mission-02: ddd96ac08ab9e4b48cbf04acaf28ebb3
+mission success criteria: null
+normative: true
+rationale: null
+ref: ''
+reviewed: 5165cf0a662f29bb25428af6ed664c0a
+short name: Inner system
+text: |
+  The mission shall observe the inner Epsilon Eridani system from two to 20
+  astronomical units in visible light

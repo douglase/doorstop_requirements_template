@@ -1,0 +1,5 @@
+settings:
+  digits: 3
+  parent: L2
+  prefix: L3
+  sep: ''

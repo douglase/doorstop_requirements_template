@@ -1,0 +1,14 @@
+active: true
+additional notes: null
+derived: false
+level: 1
+links: []
+mission success criteria: null
+normative: true
+rationale: null
+ref: ''
+reviewed: b53b445776fdd3768439e769342b091b
+short name: Demonstrate Coronagraph
+text: |
+  The mission shall demonstrate high contrast imaging via an internal
+  coronagraph in space

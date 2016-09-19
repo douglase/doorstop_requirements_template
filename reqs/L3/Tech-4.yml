@@ -1,0 +1,16 @@
+active: true
+additional notes: null
+derived: false
+level: 4
+links:
+- SCI-02: 46f2cdd32f5b32859f20d3d4edcc3fed
+- SCI-03: 6786bb10ee0387a115807f147087ec14
+mission success criteria: null
+normative: true
+rationale: null
+ref: ''
+reviewed: 795eb8a8d0e8d8ecbeb36a31d15d0a34
+short name: Pointing Stability
+text: |
+  The payload shall provide pointing within 10 milliarcseconds.
+  See Mendillo et al 2012, http://dx.doi.org/10.1364/AO.51.007069.

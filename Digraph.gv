@@ -1,0 +1,37 @@
+// The Requirements
+digraph {
+rankdir=LR
+size="200,50"
+	"Mission-01" [label="Mission-01
+Demonstrate Coronagraph"]
+	"Mission-02" [label="Mission-02
+Circumstellar Environments"]
+	"Mission-03" [label="Mission-03
+Sounding Rocket"]
+	"SCI-01" [label="SCI-01
+Inner system"]
+		"Mission-02" -> "SCI-01"
+	"SCI-02" [label="SCI-02
+Debris disk sensitivity"]
+		"Mission-02" -> "SCI-02"
+	"SCI-03" [label="SCI-03
+Nulling Coronagraph"]
+		"Mission-01" -> "SCI-03"
+	"Tech-1" [label="Tech-1
+Science bandpass"]
+		"SCI-01" -> "Tech-1"
+	"Tech-2" [label="Tech-2
+debris disk sensitivity"]
+		"SCI-01" -> "Tech-2"
+	"Tech-3" [label="Tech-3
+debris disk sensitivity"]
+		"SCI-01" -> "Tech-3"
+	"Tech-4" [label="Tech-4
+Pointing Stability"]
+		"SCI-02" -> "Tech-4"
+		"SCI-03" -> "Tech-4"
+	"Tech-5" [label="Tech-5
+Telescope aperture"]
+		"Mission-03" -> "Tech-5"
+		"SCI-02" -> "Tech-5"
+}

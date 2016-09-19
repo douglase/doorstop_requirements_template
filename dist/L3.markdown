@@ -1,0 +1,36 @@
+1 Tech-1 {#Tech-1}
+========
+
+The science bandpass shall extend from 600-750 nm
+
+*Parent links:*   [SCI-01](L2.markdown#1-sci-01-) 
+
+2 Tech-2 {#Tech-2}
+========
+
+The coronagraph inner working shall be less than 0.7".
+
+*Parent links:*   [SCI-01](L2.markdown#1-sci-01-) 
+
+3 Tech-3 {#Tech-3}
+========
+
+The coronagraph outer working shall be greater than 7"
+
+*Parent links:*   [SCI-01](L2.markdown#1-sci-01-) 
+
+4 Tech-4 {#Tech-4}
+========
+
+The payload shall provide pointing within 10 milliarcseconds. See
+Mendillo et al 2012, http://dx.doi.org/10.1364/AO.51.007069.
+
+*Parent links:*   [SCI-02](L2.markdown#1-sci-02-) ,  [SCI-03](L2.markdown#1-sci-03-) 
+
+5 Tech-5 {#Tech-5}
+========
+
+The telescope aperture shall be less than 0.5 meters
+
+*Parent links:*   [Mission-03](L1.markdown#1-mission-03-) ,
+  [SCI-02](L2.markdown#1-sci-02-) 
