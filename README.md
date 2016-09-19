@@ -19,7 +19,7 @@ example setup from command line:
     git clone https://github.mit.edu/edouglas/cgi_requirements
     pip install graphviz
 
-To run the template (a few example subset requirements from the PICTURE sounding rocket to image an debris disk [Chakrabarti et al. 2016](http://adsabs.harvard.edu/abs/2016JAI.....540004C), [Douglas et al 2016](http://adsabs.harvard.edu/abs/2016arXiv160700277D):
+To run the template (a few example subset requirements from the PICTURE sounding rocket to image an debris disk [Chakrabarti et al. 2016](http://adsabs.harvard.edu/abs/2016JAI.....540004C), [Douglas et al 2016](http://adsabs.harvard.edu/abs/2016arXiv160700277D)):
 
     ./doorstop_sync.sh 
     
