@@ -1,4 +1,4 @@
-#  Door Stop Template
+#  doorstop Requirements Template
 
 Features:
 * Generates a graphviz diagram (see example at bottom of page) showing relations between requirements
