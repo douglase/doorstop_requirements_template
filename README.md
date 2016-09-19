@@ -11,12 +11,12 @@ Requirements
 * pandoc: http://pandoc.org/installing.html
 * graphviz: https://pypi.python.org/pypi/graphviz
 
-example setup from command line:
+example setup from command line in OS-X (with [homebrew](http://brew.sh/) and [pip](https://packaging.python.org/key_projects/#pip)):
 
     brew install pandoc
     brew install graphviz
     pip install doorstop
-    git clone https://github.mit.edu/edouglas/cgi_requirements
+    git clone https://github.com/douglase/doorstop_requirements_template
     pip install graphviz
 
 To run the template (a few example subset requirements from the PICTURE sounding rocket to image an debris disk [Chakrabarti et al. 2016](http://adsabs.harvard.edu/abs/2016JAI.....540004C), [Douglas et al 2016](http://adsabs.harvard.edu/abs/2016arXiv160700277D)):
