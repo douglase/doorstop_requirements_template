@@ -6,6 +6,7 @@ Features:
 
 Requirements
 
+* Bash
 * doorstop (Browning and Adams, 2014, http://dx.doi.org/10.4236/jsea.2014.73020): https://doorstop.readthedocs.io/en/latest/#setup
 * pandoc: http://pandoc.org/installing.html
 * graphviz: https://pypi.python.org/pypi/graphviz
