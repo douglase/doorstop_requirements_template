@@ -1,5 +1,9 @@
 #  Door Stop Template
 
+Features:
+* Generates a graphviz diagram (see example at bottom of page) showing relations between requirements
+* Uses pandoc to translate doorstop generated html pages into github friendly markdown with links that work on github
+
 Requirements
 
 * doorstop (Browning and Adams, 2014, http://dx.doi.org/10.4236/jsea.2014.73020): https://doorstop.readthedocs.io/en/latest/#setup
@@ -16,23 +20,27 @@ example setup from command line:
 
 To run the template (a few example subset requirements from the PICTURE sounding rocket to image an debris disk (Chakrabarti et al. 2016)[http://adsabs.harvard.edu/abs/2016JAI.....540004C], (Douglas et al 2016)[http://adsabs.harvard.edu/abs/2016arXiv160700277D]:
 
+    ./doorstop_sync.sh 
+    
+The template includes three levels which were created by the following commands:
 
     doorstop create L1 ./reqs/L1
     doorstop create L2 ./reqs/L2 --parent L1
     doorstop create L3 ./reqs/L3 --parent L2
-    ./doorstop_sync.sh 
-    
+
 To Edit:
 
 * make and save edits to the .xlsx file related to the requirement of interest (i.e. sci_L2.xlsx	)
 * run _./doorstop_sync.sh_
-* commit and push changes to view markdown output
+* commit and push changes to view markdown [output)[dist/index.markdown)
 
 
 
 
 [Linked Requirements Documents and Traceability matrix](dist/index.markdown)
 
+
+## Outputs of the template
 
 ### Published Documents:
 
