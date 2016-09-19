@@ -1,4 +1,4 @@
-1 Mission-01 {#Mission-01}
+1 Mission-01 
 ============
 
 The mission shall demonstrate high contrast imaging via an internal
@@ -6,7 +6,7 @@ coronagraph in space
 
 *Child links:*   [SCI-03](L2.markdown#1-sci-03-) 
 
-2 Mission-02 {#Mission-02}
+2 Mission-02 
 ============
 
 The mission shall charactarize the circumstellar environment of a nearby
@@ -14,7 +14,7 @@ star
 
 *Child links:*   [SCI-01](L2.markdown#1-sci-01-) ,  [SCI-02](L2.markdown#1-sci-02-) 
 
-3 Mission-03 {#Mission-03}
+3 Mission-03 
 ============
 
 The mission shall fly on a suborbital sounding rocket

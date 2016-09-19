@@ -1,4 +1,4 @@
-1 SCI-01 {#SCI-01}
+1 SCI-01 
 ========
 
 The mission shall observe the inner Epsilon Eridani system from two to
@@ -9,7 +9,7 @@ The mission shall observe the inner Epsilon Eridani system from two to
 *Child links:*   [Tech-1](L3.markdown#1-tech-1-) ,  [Tech-2](L3.markdown#1-tech-2-) ,
   [Tech-3](L3.markdown#1-tech-3-) 
 
-2 SCI-02 {#SCI-02}
+2 SCI-02 
 ========
 
 The mission shall observe the inner Epsilon Eridani system from for
@@ -20,7 +20,7 @@ Backman et al 2009, http://adsabs.harvard.edu/abs/2009ApJ...690.1522B
 
 *Child links:*   [Tech-4](L3.markdown#1-tech-4-) ,  [Tech-5](L3.markdown#1-tech-5-) 
 
-3 SCI-03 {#SCI-03}
+3 SCI-03 
 ========
 
 The mission shall demonstrate operation of a visible nulling coronagraph

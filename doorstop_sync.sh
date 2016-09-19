@@ -16,10 +16,10 @@ doorstop publish all ./dist
 #call pandoc to convert html to markdown
 make -f MakeFile
 
-#remove everything between {# and }
-#sed -i '' -e 's/{.*}//' dist/*
+#clean up the titles of the published requirements by remove everything between {# and } 
+sed -i '' -e 's/{.*}//' dist/*
 
-#change links to point to markdown files:
+#change published links to point to markdown files:
 sed -i '' -e 's/.html/.markdown/g' dist/*.markdown
 
 python RunGraphviz.py
