@@ -9,7 +9,7 @@ coronagraph in space
 2 Mission-02 
 ============
 
-The mission shall charactarize the circumstellar environment of a nearby
+The mission shall characterize the circumstellar environment of a nearby
 star
 
 *Child links:*   [SCI-01](L2.markdown#1-sci-01-) ,  [SCI-02](L2.markdown#1-sci-02-) 
