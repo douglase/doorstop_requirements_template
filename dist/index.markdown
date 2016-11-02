@@ -26,4 +26,4 @@
     [Mission-02](L1.markdown#1-mission-02-)   [SCI-01](L2.markdown#1-sci-01-)   [Tech-3](L3.markdown#1-tech-3-) 
     [Mission-02](L1.markdown#1-mission-02-)   [SCI-02](L2.markdown#1-sci-02-)   [Tech-4](L3.markdown#1-tech-4-) 
     [Mission-02](L1.markdown#1-mission-02-)   [SCI-02](L2.markdown#1-sci-02-)   [Tech-5](L3.markdown#1-tech-5-) 
-    [Mission-03](L1.markdown#1-mission-03-) 
+    [Mission-03](L1.markdown#1-mission-03-)   [SCI-03](L2.markdown#1-sci-03-)   [Tech-4](L3.markdown#1-tech-4-) 

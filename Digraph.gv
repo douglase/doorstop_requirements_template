@@ -15,16 +15,17 @@ Inner system"]
 Debris disk sensitivity"]
 		"Mission-02" -> "SCI-02"
 	"SCI-03" [label="SCI-03
-Nulling Coronagraph"]
+Nulling Coronagraph in Space"]
 		"Mission-01" -> "SCI-03"
+		"Mission-03" -> "SCI-03"
 	"Tech-1" [label="Tech-1
 Science bandpass"]
 		"SCI-01" -> "Tech-1"
 	"Tech-2" [label="Tech-2
-debris disk sensitivity"]
+IWA"]
 		"SCI-01" -> "Tech-2"
 	"Tech-3" [label="Tech-3
-debris disk sensitivity"]
+OWA"]
 		"SCI-01" -> "Tech-3"
 	"Tech-4" [label="Tech-4
 Pointing Stability"]

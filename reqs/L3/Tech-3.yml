@@ -9,6 +9,6 @@ normative: true
 rationale: null
 ref: ''
 reviewed: c0aaef4e2f5c0b13aec853f6bc142da9
-short name: debris disk sensitivity
+short name: OWA
 text: |
   The coronagraph outer working shall be greater than 7"

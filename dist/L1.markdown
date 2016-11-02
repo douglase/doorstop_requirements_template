@@ -18,3 +18,5 @@ star
 ============
 
 The mission shall fly on a suborbital sounding rocket
+
+*Child links:*   [SCI-03](L2.markdown#1-sci-03-) 

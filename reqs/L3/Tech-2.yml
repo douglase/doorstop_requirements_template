@@ -9,6 +9,6 @@ normative: true
 rationale: null
 ref: ''
 reviewed: b31337d1d459c40094dc4b2410b6ec46
-short name: debris disk sensitivity
+short name: IWA
 text: |
   The coronagraph inner working shall be less than 0.7".

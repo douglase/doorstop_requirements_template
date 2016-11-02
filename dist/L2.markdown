@@ -26,6 +26,7 @@ Backman et al 2009, http://adsabs.harvard.edu/abs/2009ApJ...690.1522B
 The mission shall demonstrate operation of a visible nulling coronagraph
 in space
 
-*Parent links:*   [Mission-01](L1.markdown#1-mission-01-) 
+*Parent links:*   [Mission-01](L1.markdown#1-mission-01-) ,
+  [Mission-03](L1.markdown#1-mission-03-) 
 
 *Child links:*   [Tech-4](L3.markdown#1-tech-4-) 
