@@ -15,6 +15,7 @@
   * https://doorstop.readthedocs.io/en/latest/#setup
 * pandoc: http://pandoc.org/installing.html
 * graphviz: https://pypi.python.org/pypi/graphviz
+* pdflatex (optional, for Beamer slide output)
 
 ## Installation
 Example setup from command line in OS-X (with [homebrew](http://brew.sh/) and [pip](https://packaging.python.org/key_projects/#pip)):
