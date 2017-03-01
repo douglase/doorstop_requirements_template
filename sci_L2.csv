@@ -1,0 +1,4 @@
+uid,level,text,links,short name,additional notes,mission success criteria,rationale,reviewed
+SCI-01,1,The mission shall observe the inner Epsilon Eridani system from two to 20 astronomical units in visible light,Mission-02,Inner system,,,,
+SCI-02,1,"The mission shall observe the inner Epsilon Eridani system from  for sufficient time to measure a 2*10^(-4) L_star debris disk at 3AU. See Backman et al 2009, http://adsabs.harvard.edu/abs/2009ApJ...690.1522B",Mission-02,Debris disk sensitivity,,,,
+SCI-03,1,The mission shall demonstrate operation of a visible nulling coronagraph in space,"Mission-01,Mission-3",Nulling Coronagraph in Space,,,,

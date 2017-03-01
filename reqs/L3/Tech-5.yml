@@ -1,13 +1,13 @@
 active: true
-additional notes: null
+additional notes: ''
 derived: false
-level: 5
+level: 1
 links:
 - Mission-03: 3138500b34dd01d7b85feffe98b3c6c0
 - SCI-02: 46f2cdd32f5b32859f20d3d4edcc3fed
-mission success criteria: null
+mission success criteria: ''
 normative: true
-rationale: null
+rationale: ''
 ref: ''
 reviewed: aa09fb890a742ef84523ec8fb5fa290a
 short name: Telescope aperture

@@ -3,9 +3,9 @@
 #this should all probably be a makefile
 
 #run in a python 3 environment with doorstop, e.g. source activate py3_5
-doorstop import mission_L1.xlsx L1
-doorstop import sci_L2.xlsx L2
-doorstop import tech_L3.xlsx L3
+doorstop import mission_L1.csv L1
+doorstop import sci_L2.csv L2
+doorstop import tech_L3.csv L3
 
 doorstop
 
