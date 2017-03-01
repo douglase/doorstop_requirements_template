@@ -17,7 +17,7 @@ doorstop publish all ./dist
 make -f MakeFile
 
 #clean up the titles of the published requirements by remove everything between {# and } 
-sed -i '' -e 's/{.*}//' dist/*
+sed -i '' -e 's/{.*}//' dist/*.markdown
 
 #change published links to point to markdown files:
 sed -i '' -e 's/.html/.markdown/g' dist/*.markdown
@@ -25,3 +25,8 @@ sed -i '' -e 's/.html/.markdown/g' dist/*.markdown
 python RunGraphviz.py
 
 python MakeLinksGitHubFriendly.py
+
+#make latex files
+make -f MakeBeamer
+cd dist
+pdflatex beamer.tex
