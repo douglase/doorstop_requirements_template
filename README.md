@@ -16,7 +16,7 @@
 * pandoc: http://pandoc.org/installing.html
 * graphviz: https://pypi.python.org/pypi/graphviz
 
-
+## Installation
 Example setup from command line in OS-X (with [homebrew](http://brew.sh/) and [pip](https://packaging.python.org/key_projects/#pip)):
 
     brew install pandoc
@@ -25,6 +25,8 @@ Example setup from command line in OS-X (with [homebrew](http://brew.sh/) and [p
     git clone https://github.com/douglase/doorstop_requirements_template
     pip install graphviz
 
+
+## Usage
 To run the template (which generates a sample subset of post-facto requirements imagined for the PICTURE sounding rocket to image a debris disk [Chakrabarti et al. 2016](http://adsabs.harvard.edu/abs/2016JAI.....540004C), [Douglas et al 2016](http://adsabs.harvard.edu/abs/2016arXiv160700277D)):
 
     ./doorstop_sync.sh 
@@ -35,9 +37,10 @@ The template includes three levels which were created by the following commands:
     doorstop create L2 ./reqs/L2 --parent L1
     doorstop create L3 ./reqs/L3 --parent L2
 
-## To Edit:
+### To Edit:
 
-* make and save edits to the .xlsx file related to the requirement of interest (i.e. sci_L2.xlsx	)
+* make and save edits to the .csv file related to the requirement of interest (i.e. sci_L2.csv)
+	* _this step can be done repeatedly and by users without the dependencies installed_ (by directly editing .csv files on github, for example)
 * run _./doorstop_sync.sh_
 * commit and push changes to view markdown [output in dist/ directory](dist/index.markdown)
 
