@@ -1,17 +1,23 @@
 #  doorstop Requirements Template
 
-Features:
+
+
+
+## Features:
 * Generates a graphviz diagram (see example at bottom of page) showing relations between requirements
 * Uses pandoc to translate doorstop generated html pages into github friendly markdown with links that work on github
 
-Requirements
+## Requirements
 
 * Bash
-* doorstop (Browning and Adams, 2014, http://dx.doi.org/10.4236/jsea.2014.73020): https://doorstop.readthedocs.io/en/latest/#setup
+* doorstop (Browning and Adams, 2014,
+  * http://dx.doi.org/10.4236/jsea.2014.73020):
+  * https://doorstop.readthedocs.io/en/latest/#setup
 * pandoc: http://pandoc.org/installing.html
 * graphviz: https://pypi.python.org/pypi/graphviz
 
-example setup from command line in OS-X (with [homebrew](http://brew.sh/) and [pip](https://packaging.python.org/key_projects/#pip)):
+
+Example setup from command line in OS-X (with [homebrew](http://brew.sh/) and [pip](https://packaging.python.org/key_projects/#pip)):
 
     brew install pandoc
     brew install graphviz
@@ -19,7 +25,7 @@ example setup from command line in OS-X (with [homebrew](http://brew.sh/) and [p
     git clone https://github.com/douglase/doorstop_requirements_template
     pip install graphviz
 
-To run the template (a few example subset requirements from the PICTURE sounding rocket to image a debris disk [Chakrabarti et al. 2016](http://adsabs.harvard.edu/abs/2016JAI.....540004C), [Douglas et al 2016](http://adsabs.harvard.edu/abs/2016arXiv160700277D)):
+To run the template (which generates a sample subset of post-facto requirements imagined for the PICTURE sounding rocket to image a debris disk [Chakrabarti et al. 2016](http://adsabs.harvard.edu/abs/2016JAI.....540004C), [Douglas et al 2016](http://adsabs.harvard.edu/abs/2016arXiv160700277D)):
 
     ./doorstop_sync.sh 
     
@@ -29,7 +35,7 @@ The template includes three levels which were created by the following commands:
     doorstop create L2 ./reqs/L2 --parent L1
     doorstop create L3 ./reqs/L3 --parent L2
 
-To Edit:
+## To Edit:
 
 * make and save edits to the .xlsx file related to the requirement of interest (i.e. sci_L2.xlsx	)
 * run _./doorstop_sync.sh_
@@ -37,6 +43,15 @@ To Edit:
 
 
 
+### Notes:
+
+By default, doorstop only prints one level of links, so if a level is
+skipped, it won't be shown. @douglase's branch adds a setting which
+expands published links to sublevels. To install this branch:
+
+	git clone git@github.com:douglase/doorstop.git
+	cd doorstop
+	python setup.py install
 
 [Linked Requirements Documents and Traceability matrix](dist/index.markdown)
 
@@ -53,4 +68,65 @@ To Edit:
 ## Most recently committed flowchart:
 
 ![Most recently committed flowchart of requirements](Digraph.gv.png) Requirements flowchart
+
+
+
+
+## Flow of the scripts used to generate flowchart and human readible markdown files:
+
+```
+                                   ./sync_doorstop
++---------------------------------------------------------------------------------------------+
+|   +-------------------------+                                                               |
+|   |INPUT                    |                                                               |
+|   |(.CSV or .XLSX):         |                         +---------------------------------+   |
+|   |Tables with columns for :|                         | each requirement gets a YAML    |   |
+|   |uid, short name,         |                         |(YAML Ain't Markup Language):    |   |
+|   |text, links, notes.      | doorstop Python Module  |file w/ name, text, links, notes.|   |
+|   |                         +-----------------------> | and its  metadata.              |   |
+|   |                         |"doorstop import"        |"*reqs/L1/CGI-BSR0.yml           |   |
+|   |  "LevelOneReqs.csv"     |                         | *reqs/L1/CGI-BSR1.yml           |   |
+|   |                         |                         | *reqs/L1/..."                   |   |
+|   --------------------------+                         +----------+--------------------+-+   |
+|                                                                  |                    |     |
+|                            doorstop Python Module                |                    +>+   |
+|                 +<-----------------------------------------------+                      |   |
+|                 |          "doorstop"                                                   |   |
+|                 v                                                                       |   |
+|         +-------+--------------------------------------------------------------------+  |   |
+|         |   parses yaml files, resolves links and warns if unconnected requirements. |  |   |
+|         ++---------------------------------------------------------------------------+  |   |
+|          |                                                                              |   |
+|          |doorstop publish all ./dist                                                   |   |
+|          |                                                                              |   |
+|     +----v--------------------------------------------------------------------+         |   |
+|     | generates html document for each input document with hyperlinks.        |         |   |
+|     +-+-----------------------------------------------------------------------+         |   |
+|       |                                                                                 |   |
+|       | pandoc via MakeFile                                                             |   |
+|       |                                                                                 |   |
+|     +-+------------------------------------------------------------------------------+  |   |
+|     | converts html to markdown that can be parsed by github. Can also export LaTeX  |  |   |
+|     | or MSWord .docx. (http://pandoc.org).                                          |  |   |
+|     ++-------------------------------------------------------------------------------+  |   |
+|      |                                                                                  |   |
+|      |sed  and python                                                                   |   |
+|      |                                                                                  |   |
+|    +-+--------------------------+                                                       |   |
+|    |hack to make relative links |                  doorstop python api and              |   |
+|    |work-on-github.-------------+                  Graphviz (via graphviz python module)|   |
+|    +----------------------------|                                                       |   |
+|                                                                                         |   |
+|                                                                                         |   |
+|    +-------------------------------------------------------------------------------------+  |
+|    |draws connections between each linked requirement and minimizes energy of network   ||  |
+|    |and exports requirements network asa png file.                                      ||  |
+|    +-------------------------------------------------------------------------------------+  |
+|                                                                                             |
+|                       made using http://asciiflow.com                                       |
++---------------------------------------------------------------------------------------------+
+
+
+
+```
 
