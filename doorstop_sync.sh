@@ -26,7 +26,7 @@ python RunGraphviz.py
 
 python MakeLinksGitHubFriendly.py
 
-#make latex files
-make -f MakeBeamer
-cd dist
-pdflatex beamer.tex
+#to make latex beamer slides, uncomment next three lines:
+#make -f MakeBeamer
+#cd dist
+#pdflatex beamer.tex
