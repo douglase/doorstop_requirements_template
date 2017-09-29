@@ -58,7 +58,7 @@ expands published links to sublevels. To install this branch:
 
 	git clone git@github.com:douglase/doorstop.git
 	cd doorstop
-	python setup.py install
+	python setup.py develop
 
 [Linked Requirements Documents and Traceability matrix](dist/index.markdown)
 
