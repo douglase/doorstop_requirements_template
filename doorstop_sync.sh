@@ -16,11 +16,25 @@ doorstop publish all ./dist
 #call pandoc to convert html to markdown
 make -f MakeFile
 
-#clean up the titles of the published requirements by remove everything between {# and } 
-sed -i '' -e 's/{.*}//' dist/*.markdown
 
-#change published links to point to markdown files:
-sed -i '' -e 's/.html/.markdown/g' dist/*.markdown
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    #(https://stackoverflow.com/a/8597411) 
+    # Mac OSX
+    #clean up the titles of the published requirements by remove everything between {# and } 
+    sed -i '' -e 's/{.*}//' dist/*.markdown
+
+    #change published links to point to markdown files:
+    sed -i '' -e 's/.html/.markdown/g' dist/*.markdown
+elif [[ "$OSTYPE" == "freebsd"* ]]; then
+    # assuming FreeBSD is not running GNU sed
+    sed -i '' -e 's/{.*}//' dist/*.markdown
+    sed -i '' -e 's/.html/.markdown/g' dist/*.markdown
+else
+    #run GNU sed in place commands:
+    sed -i -e 's/{.*}//' dist/*.markdown
+    sed -i -e 's/.html/.markdown/g' dist/*.markdown
+fi
+
 
 python RunGraphviz.py
 
