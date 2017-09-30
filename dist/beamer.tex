@@ -1,10 +1,24 @@
-\documentclass{beamer}
+\documentclass[9pt]{beamer}
 \usepackage{textpos}
+\usepackage{gitinfo2}
+\usepackage{csvsimple}
+\usepackage{array,booktabs}
+\usepackage{url}
+\edef\masterBranch{\detokenize{master}}
+\edef\gitBranch{\gitBranch}
+\setbeamerfont{frametitle}{size=\large}
 
+%fix pandoc's tightlist:https://tex.stackexchange.com/questions/257418/error-tightlist-converting-md-file-into-pdf-using-pandoc#258486
+\providecommand{\tightlist}{}%
+%  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
 % \usepackage{beamerthemesplit} // Activate for custom appearance
 
-\title{ Spacecraft Requirements, text and rationales}
+% \usepackage{beamerthemesplit} // Activate for custom appearance
+
+\title{ Spacecraft Requirements, text and rationales
+  \tiny{Revision: \gitDescribe, Branch: \gitBranch\\
+    For access to the github repository contact edouglas@mit.edu.}}
 \author{Authors}
 \date{\today}
 

@@ -1,3 +1,6 @@
+[![DOI](https://zenodo.org/badge/68635117.svg)](https://zenodo.org/badge/latestdoi/68635117)
+
+
 #  doorstop Requirements Template
 
 
@@ -18,7 +21,10 @@
 * pdflatex (optional, for Beamer slide output)
 
 ## Installation
-Example setup from command line in OS-X (with [homebrew](http://brew.sh/) and [pip](https://packaging.python.org/key_projects/#pip)):
+
+### macOS:
+
+Example setup from command line in OS-X/macOS (with [homebrew](http://brew.sh/) and [pip](https://packaging.python.org/key_projects/#pip)):
 
     brew install pandoc
     brew install graphviz
@@ -26,7 +32,18 @@ Example setup from command line in OS-X (with [homebrew](http://brew.sh/) and [p
     git clone https://github.com/douglase/doorstop_requirements_template
     pip install graphviz
 
+### Linux
 
+In Ubuntu or other Debian variant:
+
+	sudo apt-get install graphviz
+	sudo apt-get install pandoc
+	pip install graphviz
+	pip install doorstop	# or see below 
+
+Optional for editing in a spreadsheet: `sudo apt-get install libreoffice`
+Optional for generating PDF output: `sudo apt-get install texlive-latex-extra`
+	
 ## Usage
 To run the template (which generates a sample subset of post-facto requirements imagined for the PICTURE sounding rocket to image a debris disk [Chakrabarti et al. 2016](http://adsabs.harvard.edu/abs/2016JAI.....540004C), [Douglas et al 2016](http://adsabs.harvard.edu/abs/2016arXiv160700277D)):
 
@@ -55,7 +72,7 @@ expands published links to sublevels. To install this branch:
 
 	git clone git@github.com:douglase/doorstop.git
 	cd doorstop
-	python setup.py install
+	python setup.py develop
 
 [Linked Requirements Documents and Traceability matrix](dist/index.markdown)
 
