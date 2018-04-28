@@ -1,6 +1,4 @@
-uid,level,text,links,short name,additional notes,mission success criteria,rationale,reviewed
-Tech-1,1,The science bandpass shall extend from 600-750 nm,SCI-01,Science bandpass,,,,
-Tech-2,1,"The coronagraph inner working shall be less than 0.7"". ",SCI-01,IWA,,,,
-Tech-3,1,"The coronagraph outer working shall be greater than 7""",SCI-01,OWA,,,,
-Tech-4,1,"The payload shall provide pointing within 10 milliarcseconds. See Mendillo et al 2012, http://dx.doi.org/10.1364/AO.51.007069.","SCI-03, SCI-02",Pointing Stability,,,,
-Tech-5,1,The telescope aperture shall be less than 0.5 meters,"MIssion-03, SCI-02",Telescope aperture,,,,
+uid,level,text,links,short name,additional notes,mission success criteria,rationale,reviewed,verification plan
+Tech-1,1,Technical instrument requirement Alpha,SCI-01,Instrument Alpha,,,,,
+Tech-2,1,Technical instrument requirement Beta,"SCI-02,SCI-3",Instrument Beta,,,,,
+Tech-3,1,Technical instrument requirement Gamma,"SCI-02, ",Instrument Gamma,,,,,

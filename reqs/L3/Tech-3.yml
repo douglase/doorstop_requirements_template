@@ -3,12 +3,13 @@ additional notes: ''
 derived: false
 level: 1
 links:
-- SCI-01: 4a2eb121bc8034c914b89584053b6abc
+- SCI-02: 6ca9c82ddd547ecb4400af37201b5113
 mission success criteria: ''
 normative: true
 rationale: ''
 ref: ''
-reviewed: c0aaef4e2f5c0b13aec853f6bc142da9
-short name: OWA
+reviewed: abdc9f388305bddd465caaa74042dc14
+short name: Instrument Gamma
 text: |
-  The coronagraph outer working shall be greater than 7"
+  Technical instrument requirement Gamma
+verification plan: ''

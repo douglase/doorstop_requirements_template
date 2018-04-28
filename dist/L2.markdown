@@ -1,38 +1,26 @@
-1 SCI-01 
-========
+Science requirement I 1 SCI-01 
+==============================
 
-Inner system
-
-The mission shall observe the inner Epsilon Eridani system from two to
-20 astronomical units in visible light
+Mission shall be able to perform example measurement one
 
 *Parent links:*   [Mission-02](L1.markdown#1-mission-02-) 
 
-*Child links:*   [Tech-1](L3.markdown#1-tech-1-) ,  [Tech-2](L3.markdown#1-tech-2-) ,
-  [Tech-3](L3.markdown#1-tech-3-) 
+*Child links:*   [Tech-1](L3.markdown#1-tech-1-) 
 
-1 SCI-02 
-========
+Science requirement II 1 SCI-02 
+===============================
 
-Debris disk sensitivity
-
-The mission shall observe the inner Epsilon Eridani system from for
-sufficient time to measure a 2\*10\^(-4) L\_star debris disk at 3AU. See
-Backman et al 2009, http://adsabs.harvard.edu/abs/2009ApJ...690.1522B
+Mission shall be able to perform example measurement two
 
 *Parent links:*   [Mission-02](L1.markdown#1-mission-02-) 
 
-*Child links:*   [Tech-4](L3.markdown#1-tech-4-) ,  [Tech-5](L3.markdown#1-tech-5-) 
+*Child links:*   [Tech-2](L3.markdown#1-tech-2-) ,  [Tech-3](L3.markdown#1-tech-3-) 
 
-1 SCI-03 
-========
+Science requirement III 1 SCI-03 
+================================
 
-Nulling Coronagraph in Space
+Mission shall be able to perform example measurement three
 
-The mission shall demonstrate operation of a visible nulling coronagraph
-in space
+*Parent links:*   [Mission-01](L1.markdown#1-mission-01-) ,mission-3
 
-*Parent links:*   [Mission-01](L1.markdown#1-mission-01-) ,
-  [Mission-03](L1.markdown#1-mission-03-) 
-
-*Child links:*   [Tech-4](L3.markdown#1-tech-4-) 
+*Child links:*   [Tech-2](L3.markdown#1-tech-2-) 

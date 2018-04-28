@@ -3,19 +3,19 @@ digraph {
 rankdir=LR
 size="200,50"
 	"Mission-01" [label="Mission-01
-Demonstrate Coronagraph"]
+User requirement"]
 	"Mission-02" [label="Mission-02
-Circumstellar Environments"]
+Constraints"]
 	"Mission-03" [label="Mission-03
 Sounding Rocket"]
 	"SCI-01" [label="SCI-01
-Inner system"]
+Science requirement I"]
 		"Mission-02" -> "SCI-01"
 	"SCI-02" [label="SCI-02
-Debris disk sensitivity"]
+Science requirement II"]
 		"Mission-02" -> "SCI-02"
 	"SCI-03" [label="SCI-03
-Nulling Coronagraph in Space"]
+Science requirement III"]
 		"Mission-01" -> "SCI-03"
 		"Mission-03" -> "SCI-03"
 	"Tech-1" [label="Tech-1

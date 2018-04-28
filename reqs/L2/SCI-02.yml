@@ -3,14 +3,13 @@ additional notes: ''
 derived: false
 level: 1
 links:
-- Mission-02: b993bd506970ab982f9101ae3f21e220
+- Mission-02: 79070034b1a1744bace885529089f2cc
 mission success criteria: ''
 normative: true
 rationale: ''
 ref: ''
-reviewed: c2cd86963f56bc6777dc19a31d0a4ad9
-short name: Debris disk sensitivity
+reviewed: 3f2b27210890485fd2c8e2391cd62157
+short name: Science requirement II
 text: |
-  The mission shall observe the inner Epsilon Eridani system from  for
-  sufficient time to measure a 2*10^(-4) L_star debris disk at 3AU. See Backman
-  et al 2009, http://adsabs.harvard.edu/abs/2009ApJ...690.1522B
+  Mission shall be able to perform example measurement two
+verification plan: ''
