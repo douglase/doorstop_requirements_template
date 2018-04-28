@@ -87,8 +87,7 @@ expands published links to sublevels. To install this branch:
 
 
 ## Most recently committed flowchart:
-
-![Most recently committed flowchart of requirements](Digraph.gv.png) Requirements flowchart
+![Most recently committed flowchart of requirements](Digraph_gv.png) Requirements flowchart
 
 
 

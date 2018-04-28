@@ -4,12 +4,12 @@ derived: false
 level: 1
 links:
 - Mission-01: 4df33868b6317d02b557a7bd48124bab
-- Mission-3: null
+- Mission-03: 0d6c52fe65c60e9e6a48c6c1b189a3e7
 mission success criteria: ''
 normative: true
 rationale: ''
 ref: ''
-reviewed: 6d2dde3f3a4a2454d58b43e264e7c405
+reviewed: 28477f4723958c1f1b1a329c803b7ba5
 short name: Science requirement III
 text: |
   Mission shall be able to perform example measurement three
