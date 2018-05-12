@@ -3,13 +3,13 @@ additional notes: ''
 derived: false
 level: 1
 links:
-- Mission-02: b993bd506970ab982f9101ae3f21e220
+- Mission-02: 79070034b1a1744bace885529089f2cc
 mission success criteria: ''
 normative: true
 rationale: ''
 ref: ''
-reviewed: 5165cf0a662f29bb25428af6ed664c0a
-short name: Inner system
+reviewed: ce35d65c066a99144f5cd0b6cfba2f85
+short name: Science requirement I
 text: |
-  The mission shall observe the inner Epsilon Eridani system from two to 20
-  astronomical units in visible light
+  Mission shall be able to perform example measurement one
+verification plan: ''

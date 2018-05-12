@@ -7,7 +7,8 @@ mission success criteria: ''
 normative: true
 rationale: ''
 ref: ''
-reviewed: 3138500b34dd01d7b85feffe98b3c6c0
-short name: Sounding Rocket
+reviewed: 0d6c52fe65c60e9e6a48c6c1b189a3e7
+short name: User requirement
 text: |
-  The mission shall fly on a suborbital sounding rocket
+  Mission level requirement C
+verification plan: ''

@@ -3,12 +3,13 @@ additional notes: ''
 derived: false
 level: 1
 links:
-- SCI-01: 4a2eb121bc8034c914b89584053b6abc
+- SCI-01: f9801348ce3b33579655fabb64aa6d0f
 mission success criteria: ''
 normative: true
 rationale: ''
 ref: ''
-reviewed: 922e0209cff6217ce2dc88a78dbf63b8
-short name: Science bandpass
+reviewed: e46d304c1cf8716689a2a16a0fedee90
+short name: Instrument Alpha
 text: |
-  The science bandpass shall extend from 600-750 nm
+  Technical instrument requirement Alpha
+verification plan: ''

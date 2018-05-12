@@ -1,28 +1,20 @@
-1 Mission-01 
-============
+User requirement 1 Mission-01 
+=============================
 
-Demonstrate Coronagraph
-
-The mission shall demonstrate high contrast imaging via an internal
-coronagraph in space
+Mission level requirement A
 
 *Child links:*   [SCI-03](L2.markdown#1-sci-03-) 
 
-1 Mission-02 
-============
+Constraints 1 Mission-02 
+========================
 
-Circumstellar Environments
-
-The mission shall characterize the circumstellar environment of a nearby
-star
+Mission level requirement B
 
 *Child links:*   [SCI-01](L2.markdown#1-sci-01-) ,  [SCI-02](L2.markdown#1-sci-02-) 
 
-1 Mission-03 
-============
+User requirement 1 Mission-03 
+=============================
 
-Sounding Rocket
+Mission level requirement C
 
-The mission shall fly on a suborbital sounding rocket
-
-*Child links:*   [SCI-03](L2.markdown#1-sci-03-) ,  [Tech-5](L3.markdown#1-tech-5-) 
+*Child links:*   [SCI-03](L2.markdown#1-sci-03-) 

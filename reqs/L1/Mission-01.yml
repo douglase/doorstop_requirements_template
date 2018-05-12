@@ -7,8 +7,8 @@ mission success criteria: ''
 normative: true
 rationale: ''
 ref: ''
-reviewed: b53b445776fdd3768439e769342b091b
-short name: Demonstrate Coronagraph
+reviewed: 4df33868b6317d02b557a7bd48124bab
+short name: User requirement
 text: |
-  The mission shall demonstrate high contrast imaging via an internal
-  coronagraph in space
+  Mission level requirement A
+verification plan: ''
