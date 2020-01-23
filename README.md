@@ -22,13 +22,22 @@
 
 ## Installation
 
+### Note:
+
+By default, doorstop only prints one level of links, so if a level is
+skipped, it won't be shown. @douglase's branch adds a setting which
+expands published links to sublevels. To install this branch which has been tested with the template:
+
+	git clone git@github.com:douglase/doorstop.git
+	cd doorstop
+	python setup.py develop
+
 ### macOS:
 
 Example setup from command line in OS-X/macOS (with [homebrew](http://brew.sh/) and [pip](https://packaging.python.org/key_projects/#pip)):
 
     brew install pandoc
     brew install graphviz
-    pip install doorstop
     git clone https://github.com/douglase/doorstop_requirements_template
     pip install graphviz
 
@@ -39,7 +48,6 @@ In Ubuntu or other Debian variant:
 	sudo apt-get install graphviz
 	sudo apt-get install pandoc
 	pip install graphviz
-	pip install doorstop	# or see below 
 
 Optional for editing in a spreadsheet: `sudo apt-get install libreoffice`
 Optional for generating PDF output: `sudo apt-get install texlive-latex-extra`
@@ -64,15 +72,6 @@ The template includes three levels which were created by the following commands:
 
 
 
-### Notes:
-
-By default, doorstop only prints one level of links, so if a level is
-skipped, it won't be shown. @douglase's branch adds a setting which
-expands published links to sublevels. To install this branch:
-
-	git clone git@github.com:douglase/doorstop.git
-	cd doorstop
-	python setup.py develop
 
 [Linked Requirements Documents and Traceability matrix](dist/index.markdown)
 
