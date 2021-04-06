@@ -4,7 +4,7 @@ ORIGINAL_WD=$(pwd)
 
 # download and install doorstop
 
-git clone https://github.com/douglase/doorstop
+git clone  --branch develop https://github.com/douglase/doorstop
 
 cd doorstop
 
