@@ -7,11 +7,7 @@ cache: pip
 python:
     - "3.7"
 
-deploy:
-  provider: pages:git
-  token: $GITHUB_KEY # Set in the settings page of your repository, as a secure variable
-  edge: true # opt in to dpl v2
-  
+
 before_install:
   - sudo apt-get -qq update
   - sudo apt-get install -y texlive-base texlive-latex-base texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra
@@ -26,3 +22,10 @@ script:
   - bash deploy.sh
     #https://blog.travis-ci.com/2021-03-08-latex-ci
   - bash sync_tex.sh ./dist beamer
+  
+deploy:
+  provider: pages:git
+  token: $GITHUB_KEY # Set in the settings page of your repository, as a secure variable
+  edge: true # opt in to dpl v2
+  local_dir:beamer
+  
