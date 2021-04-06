@@ -4,6 +4,7 @@ PANDOC_VERSION="2.11.4"
 TEXDIR="TeX"
 
 yum install wget
+yum install graphviz
 
 # Store working directory for later
 ORIGINAL_WD=$(pwd)
