@@ -5,7 +5,7 @@ TEXDIR="TeX"
 
 yum install wget
 yum install graphviz
-sudo yum install sqlite-devel
+yum install sqlite-devel
 
 # Store working directory for later
 ORIGINAL_WD=$(pwd)
