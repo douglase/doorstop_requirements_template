@@ -50,3 +50,4 @@ cd doorstop
 
 python3 setup.py install
 
+./doorstop_sync
