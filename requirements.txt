@@ -1,1 +1,2 @@
 graphviz==0.16
+pysqlite3
