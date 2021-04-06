@@ -20,3 +20,5 @@ install:
     
 script:
   - bash deploy.sh
+    #https://blog.travis-ci.com/2021-03-08-latex-ci
+  - bash sync_tex.sh ./dist beamer
