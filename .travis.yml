@@ -1,14 +1,21 @@
----
-sudo: require
 dist: xenial
-language: bash
+
+language: python
+
+cache: pip
+
 python:
     - "3.7"
-# Montana Mendy runs lint (travis lint)
+
 
 before_install:
   - sudo apt-get -qq update
   - sudo apt-get install -y texlive-base texlive-latex-base texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra
-  - sudo apt-get install python3-pip
+  
+  
+install:
+    - pip install pipenv --upgrade-strategy=only-if-needed
+    - pipenv install --dev
+    
 script:
   - bash deploy.sh
