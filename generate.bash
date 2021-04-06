@@ -53,7 +53,7 @@ git clone https://github.com/douglase/doorstop
 
 cd doorstop
 
-python setup.py install
+python3 setup.py install
 
 cd ${ORIGINAL_WD}
 
