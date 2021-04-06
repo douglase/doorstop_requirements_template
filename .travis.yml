@@ -27,4 +27,4 @@ deploy:
   token: $GITHUB_KEY # Set in the settings page of your repository, as a secure variable
   edge: true # opt in to dpl v2
   local_dir: beamer
-  
+  url: ewandouglas.space
