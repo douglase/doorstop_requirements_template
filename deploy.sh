@@ -7,7 +7,7 @@ git clone https://github.com/douglase/doorstop
 
 cd doorstop
 
-python3 setup.py install
+python setup.py install
 
 cd ${ORIGINAL_WD}
 
