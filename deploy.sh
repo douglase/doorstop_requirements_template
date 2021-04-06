@@ -12,6 +12,9 @@ python setup.py install
 
 cd ${ORIGINAL_WD}
 
+#cleanup
+rm -rf doorstop_lib
+
 pwd 
 
 ./doorstop_sync.sh 
