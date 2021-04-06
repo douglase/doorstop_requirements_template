@@ -9,7 +9,7 @@ python:
 
 deploy:
   provider: pages:git
-  token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  token: $GITHUB_KEY # Set in the settings page of your repository, as a secure variable
   edge: true # opt in to dpl v2
   
 before_install:
