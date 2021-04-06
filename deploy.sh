@@ -1,5 +1,6 @@
 
 
+ORIGINAL_WD=$(pwd)
 
 # download and install doorstop
 
