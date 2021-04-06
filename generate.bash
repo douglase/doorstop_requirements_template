@@ -1,7 +1,7 @@
 #!/bin/bash
 TINYTEX_VERSION="2021.03"
 PANDOC_VERSION="2.11.4"
-TEXDIR="vtex"
+TEXDIR="TeX"
 
 yum install wget
 
