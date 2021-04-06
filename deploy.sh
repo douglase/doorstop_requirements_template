@@ -1,5 +1,9 @@
 
+
+pip install setuptools
+
 # download and install doorstop
+
 git clone https://github.com/douglase/doorstop
 
 cd doorstop
