@@ -7,7 +7,11 @@ cache: pip
 python:
     - "3.7"
 
-
+deploy:
+  provider: pages:git
+  token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  edge: true # opt in to dpl v2
+  
 before_install:
   - sudo apt-get -qq update
   - sudo apt-get install -y texlive-base texlive-latex-base texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra
