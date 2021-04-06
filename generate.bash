@@ -19,6 +19,17 @@ rm TinyTeX.tar.gz
 PANDOC_URL="https://github.com/jgm/pandoc/releases/download/$PANDOC_VERSION/pandoc-$PANDOC_VERSION-linux-amd64"
 wget --progress=dot:giga -O pandoc.tar.gz ${PANDOC_URL}.tar.gz
 
+# download and install doorstop
+git clone https://github.com/douglase/doorstop
+
+cd doorstop
+
+python setup.py
+
+cd ~
+
+#
+
 tar xzf pandoc.tar.gz pandoc-${PANDOC_VERSION}/bin/pandoc
 mv pandoc-${PANDOC_VERSION}/bin/pandoc $TEXDIR/bin/*/
 rm -rf ./pandoc-${PANDOC_VERSION}
