@@ -14,4 +14,4 @@ cd ${ORIGINAL_WD}
 
 pwd 
 
- doorstop_sync.sh 
+./doorstop_sync.sh 
