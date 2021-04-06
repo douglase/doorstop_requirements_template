@@ -1,2 +1,2 @@
+python==3.7
 graphviz==0.16
-setuptools==54.2.0
