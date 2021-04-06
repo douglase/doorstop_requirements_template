@@ -27,7 +27,7 @@ git clone https://github.com/douglase/doorstop
 
 cd doorstop
 
-python setup.py
+python3 setup.py develop
 
 cd ~
 
