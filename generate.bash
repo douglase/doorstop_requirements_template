@@ -8,7 +8,7 @@ yum install graphviz
 yum install sqlite-devel
 yum install libyaml-devel
 
-pip install pysqlite3 
+pip install pysqlite3 --user 
 
 
 # Store working directory for later
