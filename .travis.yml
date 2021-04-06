@@ -2,7 +2,8 @@
 sudo: require
 dist: xenial
 language: bash
-
+python:
+    - "3.7"
 # Montana Mendy runs lint (travis lint)
 
 before_install:
