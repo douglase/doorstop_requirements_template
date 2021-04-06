@@ -10,4 +10,4 @@ before_install:
   - sudo apt-get install -y texlive-base texlive-latex-base texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra
 
 script:
-  - bash test.sh ./ main
+  - bash deploy.sh
