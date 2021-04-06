@@ -3,6 +3,8 @@ TINYTEX_VERSION="2021.03"
 PANDOC_VERSION="2.11.4"
 TEXDIR="vtex"
 
+yum install wget
+
 # Store working directory for later
 ORIGINAL_WD=$(pwd)
 
