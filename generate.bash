@@ -6,7 +6,11 @@ TEXDIR="TeX"
 yum install wget
 yum install graphviz
 yum install sqlite-devel
+yum install libyaml-devel
+
 pip install pysqlite3 
+
+
 # Store working directory for later
 ORIGINAL_WD=$(pwd)
 
