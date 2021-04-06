@@ -1,6 +1,6 @@
 
 
-pip install setuptools
+pip3 install setuptools
 
 # download and install doorstop
 
