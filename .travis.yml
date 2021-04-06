@@ -11,7 +11,8 @@ python:
 before_install:
   - sudo apt-get -qq update
   - sudo apt-get install -y texlive-base texlive-latex-base texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra
-  
+  - sudo apt-get install pandoc
+  - sudo apt-get install graphviz
   
 install:
     - pip install pipenv --upgrade-strategy=only-if-needed
