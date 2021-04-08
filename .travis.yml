@@ -2,9 +2,6 @@ dist: xenial
 
 language: python
 
-ssl_options:
-  ca_file: null
-
 cache: pip
 
 python:
@@ -27,6 +24,8 @@ script:
   
 deploy:
   provider: pages
-  token: $GITHUB_KEY # Set in the settings page of your repository, as a secure variable
-  local_dir: beamer
-  url: ewandouglas.space/doorstop_requirements_template
+  skip_cleanup: true
+  github_token: $GITHUB_KEY  # Set in the settings page of your repository, as a secure variable
+  keep_history: true
+  on:
+    branch: main
