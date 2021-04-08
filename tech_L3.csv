@@ -1,4 +1,4 @@
 uid,level,text,links,short name,additional notes,mission success criteria,rationale,reviewed,verification plan
 Tech-1,1,Technical instrument requirement Alpha,SCI-01,Instrument Alpha,,,,,
 Tech-2,1,Technical instrument requirement Beta,"SCI-02,SCI-3",Instrument Beta,,,,,
-Tech-3,1,Technical instrument requirement Gamma,"SCI-02, ",Instrument Gamma,,,,, test
+Tech-3,1,Technical instrument requirement Gamma,"SCI-02, ",Instrument $\Gamma$,,,,, test
