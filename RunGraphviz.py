@@ -52,6 +52,6 @@ for doc_n, document in  enumerate(tree.documents):
                       penwidth=width)#, constraint='false')
 
 dot.body.append('fontsize=20')
-dot.render('Digraph_gv')#save("dot.svg")
+dot.render('dist/Digraph_gv')#save("dot.svg")
 
 print('graphviz rendered')
