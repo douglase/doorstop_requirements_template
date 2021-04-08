@@ -2,6 +2,9 @@ dist: xenial
 
 language: python
 
+ssl_options:
+  ca_file: null
+
 cache: pip
 
 python:
