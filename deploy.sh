@@ -26,10 +26,14 @@ pwd
 
 
 mkdir .git
+# get git parameters:
+
 # Copyright 2015 Brent Longborough
 # Part of gitinfo2 package Version 2
 # Release 2.0.7 2015-11-22
 # Please read gitinfo2.pdf for licencing and other details
+# this work —gitinfo2— may be distributed and/or modified under theconditions of the LaTeX Project Public License:
+# (http://ctan.math.utah.edu/ctan/tex-archive/macros/latex/contrib/gitinfo2/gitinfo2.pdf)
 # -----------------------------------------------------
 # Post-{commit,checkout,merge} hook for the gitinfo2 package
 #
