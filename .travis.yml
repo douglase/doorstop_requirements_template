@@ -22,10 +22,20 @@ script:
     #https://blog.travis-ci.com/2021-03-08-latex-ci
   - bash sync_tex.sh ./dist beamer
   
+# Here is the magic part, https://slashgear.github.io/how-to-deploy-on-github-pages-with-travis-ci/
 deploy:
+  # Use Github pages deploy process
   provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_KEY  # Set in the settings page of your repository, as a secure variable
-  keep_history: true
+  # Keep builded pages
+  skip-cleanup: true
+  # Directory where your generated files are located
+  local_dir: public
+  # Github security/auth token
+  github-token: $github_token
+  # Incremental commit to keep old build/files from previous deployments
+  keep-history: true
+  # Git branch on which it should deploy (master, gh-pages, foo...)
+  target_branch: gh-pages
   on:
-    branch: gh-pages
+    # Which branch on commit/push will trigger deployment
+    branch: master
