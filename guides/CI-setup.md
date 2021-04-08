@@ -9,10 +9,10 @@ Continuous integration tools such as Travis CI, allow real-time compilation of t
 
 ### setup for Travis CI on new branch
 
-- create Travis CI account
-- link repository to account
-- add github token to repo setup on travis CI:
+- create Travis CI account by configuring app: https://github.com/apps/travis-ci
+- link your requirements repository to account
+- add [github personal access token](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token), named `github_token` to repo setup on travis CI as shown in screenshot below
 
 ![image](https://user-images.githubusercontent.com/1025951/113973312-f5664e80-97f0-11eb-8e14-45d2498cafb6.png)
 
-For [security](https://blog.travis-ci.com/2017-05-08-security-advisory), I created a new "machine" user , made it a collaborator on the repo, and used the machine user's token on Travis instead of my primary user's token.
+For [security](https://blog.travis-ci.com/2017-05-08-security-advisory), I created a new "machine" user , made it a collaborator on the repo, and used the machine user's token on Travis instead of my primary user's token. this isn't required.
