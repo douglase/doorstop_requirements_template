@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2021.4.8)  8 APR 2021 05:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2021.4.8)  8 APR 2021 05:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -965,12 +965,13 @@ LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./beamer.toc) [2
 
 ]
-<Digraph_gv.png, id=93, 943.525pt x 615.29875pt>
+<Digraph_gv.png, id=93, 888.31876pt x 579.16376pt>
 File: Digraph_gv.png Graphic file (type png)
  <use Digraph_gv.png>
 Package pdftex.def Info: Digraph_gv.png used on input line 50.
-(pdftex.def)             Requested size: 307.28987pt x 200.39221pt.
- [3
+(pdftex.def)             Requested size: 307.28987pt x 200.34195pt.
+
+[3
 
  <./Digraph_gv.png>] (./L1_beamer.tex [4
 
@@ -980,34 +981,16 @@ Package pdftex.def Info: Digraph_gv.png used on input line 50.
 
 ]) (./L2_beamer.tex [7
 
-] [8
+]
+[8
 
 ] [9
 
-])
-(./L3_beamer.tex [10
+]) (./L3_beamer.tex [10
 
 ] [11
 
-]
-LaTeX Font Info:    Try loading font information for U+msa on input line 33.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 33.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    Try loading font information for OT1+mathkerncmss on input 
-line 33.
-
-(/usr/share/texlive/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
-File: ot1mathkerncmss.fd 2013/03/27 Fontinst v1.933 font definitions for OT1/ma
-thkerncmss.
-)
-[12
+] [12
 
 ])
 \tf@nav=\write8
@@ -1034,21 +1017,21 @@ LaTeX Font Warning: Size substitutions with differences
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 60.
  ) 
 Here is how much of TeX's memory you used:
- 18057 strings out of 494953
- 342415 string characters out of 6180978
+ 17986 strings out of 494953
+ 340764 string characters out of 6180978
  411848 words of memory out of 5000000
- 20868 multiletter control sequences out of 15000+600000
- 10150 words of font info for 37 fonts, out of 8000000 for 9000
+ 20820 multiletter control sequences out of 15000+600000
+ 5812 words of font info for 21 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  56i,14n,55p,934b,551s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi9.pfb>
-Output written on beamer.pdf (12 pages, 105802 bytes).
+Output written on beamer.pdf (12 pages, 102176 bytes).
 PDF statistics:
- 387 PDF objects out of 1000 (max. 8388607)
- 357 compressed objects within 4 object streams
+ 385 PDF objects out of 1000 (max. 8388607)
+ 356 compressed objects within 4 object streams
  31 named destinations out of 1000 (max. 500000)
  80 words of extra memory for PDF output out of 10000 (max. 10000000)
 

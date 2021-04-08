@@ -30,7 +30,7 @@ Instrument Beta" color=gray79]
 	"SCI-02" -> "Tech-2" [color=blue penwidth=8.22947056533328 style=solid]
 	"SCI-03" -> "Tech-2" [color=blue penwidth=7.187936056313463 style=solid]
 	"Tech-3" [label="Tech-3
-Instrument $\Gamma$" color=gray79]
+Instrument Gamma" color=gray79]
 	"SCI-02" -> "Tech-3" [color=chocolate penwidth=9.458865003910399 style=solid]
 fontsize=20
 }
