@@ -28,4 +28,4 @@ deploy:
   github_token: $GITHUB_KEY  # Set in the settings page of your repository, as a secure variable
   keep_history: true
   on:
-    branch: main
+    branch: gh-pages
