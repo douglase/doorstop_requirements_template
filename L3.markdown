@@ -19,7 +19,7 @@ Technical instrument requirement Beta
 1 Tech-3 
 ========
 
-*Instrument Gamma*
+*Instrument \$\\Gamma\$*
 
 Technical instrument requirement Gamma
 
