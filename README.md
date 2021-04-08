@@ -91,8 +91,7 @@ The template includes three levels which were created by the following commands:
 
 ## Continuous Integration 
 
-This repository has been setup to publish to Travis CI, see [CI setup guide](guides/CI-setup.md).
-For the latest PDF, see: douglase.github.io/doorstop_requirements_template/beamer.pdf
+This repository has been setup to publish to Travis CI, see [CI setup guide](guides/CI-setup.md) abnd published to github pages, for the latest PDF, see: douglase.github.io/doorstop_requirements_template/beamer.pdf
 
 
 ## Flow of the scripts used to generate flowchart and human readible markdown files:
