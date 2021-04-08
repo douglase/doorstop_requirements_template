@@ -1,5 +1,5 @@
 [![DOI](https://zenodo.org/badge/68635117.svg)](https://zenodo.org/badge/latestdoi/68635117)
-[![Build Status](https://travis-ci.com/douglase/doorstop_requirements_template.svg?branch=master)](https://travis-ci.com/douglase/doorstop_requirements_template)
+[![Build Status](https://travis-ci.com/douglase/doorstop_requirements_template.svg?branch=main)](https://travis-ci.com/douglase/doorstop_requirements_template)
 
 #  doorstop Requirements Template
 
