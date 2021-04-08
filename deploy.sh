@@ -12,8 +12,11 @@ python setup.py install
 
 cd ${ORIGINAL_WD}
 
-#cleanup
+#cleanup, otherwise breaks with multiple 
 rm -rf doorstop_lib
+
+#copy the gitinfo2 web-hook 
+cp  guides/example_hook.txt ./git/post-commit
 
 pwd 
 
