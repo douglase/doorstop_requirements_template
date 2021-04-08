@@ -16,9 +16,9 @@ cd ${ORIGINAL_WD}
 rm -rf doorstop_lib
 
 #copy the gitinfo2 web-hook 
-cp  guides/example_hook.txt ./git/post-commit
 #make executable
-chmod g+x p./git/post-commit
+chmod g+x ./example_hook.sh
+./example_hook.sh
 
 pwd 
 
