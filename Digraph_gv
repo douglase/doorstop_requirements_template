@@ -1,0 +1,36 @@
+// The Requirements
+digraph {
+	node [color=lightblue2 fontsize=55 style=filled]
+rankdir=LR
+ratio=.65
+size="75,50"
+rank=min
+dpi = 25
+	"Mission-01" [label="Mission-01
+User requirement" color=gray95]
+	"Mission-02" [label="Mission-02
+Constraints" color=gray95]
+	"Mission-03" [label="Mission-03
+User requirement" color=gray95]
+	"SCI-01" [label="SCI-01
+Science requirement I" color=gray88]
+	"Mission-02" -> "SCI-01" [color=black penwidth=7.744067519636624 style=solid]
+	"SCI-02" [label="SCI-02
+Science requirement II" color=gray88]
+	"Mission-02" -> "SCI-02" [color=blue penwidth=8.575946831862097 style=solid]
+	"SCI-03" [label="SCI-03
+Science requirement III" color=gray88]
+	"Mission-01" -> "SCI-03" [color=chocolate penwidth=8.01381688035822 style=solid]
+	"Mission-03" -> "SCI-03" [color=chocolate penwidth=7.724415914984484 style=solid]
+	"Tech-1" [label="Tech-1
+Instrument Alpha" color=gray79]
+	"SCI-01" -> "Tech-1" [color=black penwidth=7.118273996694524 style=solid]
+	"Tech-2" [label="Tech-2
+Instrument Beta" color=gray79]
+	"SCI-02" -> "Tech-2" [color=blue penwidth=8.22947056533328 style=solid]
+	"SCI-03" -> "Tech-2" [color=blue penwidth=7.187936056313463 style=solid]
+	"Tech-3" [label="Tech-3
+Instrument $\Gamma$" color=gray79]
+	"SCI-02" -> "Tech-3" [color=chocolate penwidth=9.458865003910399 style=solid]
+fontsize=20
+}

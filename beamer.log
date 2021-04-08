@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2021.4.8)  8 APR 2021 05:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2021.4.8)  8 APR 2021 05:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -965,15 +965,14 @@ LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./beamer.toc) [2
 
 ]
-<../Digraph_gv.png, id=93, 706.64pt x 460.72125pt>
-File: ../Digraph_gv.png Graphic file (type png)
- <use ../Digraph_gv.png>
-Package pdftex.def Info: ../Digraph_gv.png used on input line 50.
-(pdftex.def)             Requested size: 307.28987pt x 200.34885pt.
+<Digraph_gv.png, id=93, 943.525pt x 615.29875pt>
+File: Digraph_gv.png Graphic file (type png)
+ <use Digraph_gv.png>
+Package pdftex.def Info: Digraph_gv.png used on input line 50.
+(pdftex.def)             Requested size: 307.28987pt x 200.39221pt.
+ [3
 
-[3
-
- <../Digraph_gv.png>] (./L1_beamer.tex [4
+ <./Digraph_gv.png>] (./L1_beamer.tex [4
 
 ] [5
 
@@ -981,12 +980,12 @@ Package pdftex.def Info: ../Digraph_gv.png used on input line 50.
 
 ]) (./L2_beamer.tex [7
 
-]
-[8
+] [8
 
 ] [9
 
-]) (./L3_beamer.tex [10
+])
+(./L3_beamer.tex [10
 
 ] [11
 
@@ -1035,8 +1034,8 @@ LaTeX Font Warning: Size substitutions with differences
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 60.
  ) 
 Here is how much of TeX's memory you used:
- 18058 strings out of 494953
- 342430 string characters out of 6180978
+ 18057 strings out of 494953
+ 342415 string characters out of 6180978
  411848 words of memory out of 5000000
  20868 multiletter control sequences out of 15000+600000
  10150 words of font info for 37 fonts, out of 8000000 for 9000
@@ -1046,7 +1045,7 @@ Here is how much of TeX's memory you used:
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi9.pfb>
-Output written on beamer.pdf (12 pages, 107174 bytes).
+Output written on beamer.pdf (12 pages, 105802 bytes).
 PDF statistics:
  387 PDF objects out of 1000 (max. 8388607)
  357 compressed objects within 4 object streams
