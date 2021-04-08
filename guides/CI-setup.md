@@ -5,18 +5,9 @@
 
 Continuous integration tools such as Travis CI, allow real-time compilation of the final output PDF without local installation of dependencies.
 
-[.travis.yml](../.travis.yml) defines the system for compilation and lists dependencies and calls [deploy.sh](../deploy.sh), which  installs the preferred version of the doorstop library and runs  _doorstop_sync.sh which updates the datebase and generates LaTeX and Markdown outputs.
+[.travis.yml](../.travis.yml) and [requirements.txt](requirements.txt)  defines the system for compilation and lists dependencies and calls [deploy.sh](../deploy.sh), which  installs the preferred version of the doorstop library and runs  _doorstop_sync.sh which updates the datebase and generates LaTeX and Markdown outputs.
 
-Setup of a new copy should be straightforward:
-
-### 1. Create gh-pages branch
-
-
-create `gh-pages` branch if it doesn't already exist: 
-https://stackoverflow.com/a/4772329
-
-
-### 2. setup for Travis CI on a new fork/repo
+### setup for Travis CI on new branch
 
 - create Travis CI account
 - link repository to account
@@ -25,4 +16,3 @@ https://stackoverflow.com/a/4772329
 ![image](https://user-images.githubusercontent.com/1025951/113973312-f5664e80-97f0-11eb-8e14-45d2498cafb6.png)
 
 For [security](https://blog.travis-ci.com/2017-05-08-security-advisory), I created a new "machine" user , made it a collaborator on the repo, and used the machine user's token on Travis instead of my primary user's token.
-
