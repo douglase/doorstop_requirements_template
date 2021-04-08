@@ -23,7 +23,7 @@ script:
   - bash sync_tex.sh ./dist beamer
   
 deploy:
-  provider: pages:git
+  provider: pages
   token: $GITHUB_KEY # Set in the settings page of your repository, as a secure variable
   local_dir: beamer
   url: ewandouglas.space/doorstop_requirements_template
