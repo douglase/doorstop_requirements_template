@@ -29,7 +29,7 @@ deploy:
   # Keep builded pages
   skip-cleanup: true
   # Directory where your generated files are located
-  local_dir: public
+  local_dir: dist
   # Github security/auth token
   github-token: $github_token
   # Incremental commit to keep old build/files from previous deployments
