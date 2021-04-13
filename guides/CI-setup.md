@@ -7,7 +7,7 @@ Continuous integration tools such as Travis CI, allow real-time compilation of t
 
 [.travis.yml](../.travis.yml) and [requirements.txt](requirements.txt)  defines the system for compilation and lists dependencies and calls [deploy.sh](../deploy.sh), which  installs the preferred version of the doorstop library and runs  _doorstop_sync.sh_ which updates the datebase and generates LaTeX and Markdown outputs them to a new branch called gh-pages, which you can configure to publish publically or not in your repository settings.
 
-### setup for Travis CI on new branch
+### setup for Travis CI on new copy of the template
 
 - create Travis CI account by configuring app: https://github.com/apps/travis-ci
 - link your requirements repository to account
