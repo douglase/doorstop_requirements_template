@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.4.8)  8 APR 2021 21:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.4.13)  13 APR 2021 04:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -964,8 +964,8 @@ Package rerunfilecheck Info: File `beamer.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  19047 strings out of 483183
- 361986 string characters out of 5966293
- 606460 words of memory out of 5000000
+ 361986 string characters out of 5966292
+ 606459 words of memory out of 5000000
  33556 multiletter control sequences out of 15000+600000
  534810 words of font info for 32 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -974,7 +974,7 @@ Here is how much of TeX's memory you used:
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi9.pfb>
-Output written on beamer.pdf (12 pages, 107706 bytes).
+Output written on beamer.pdf (12 pages, 107338 bytes).
 PDF statistics:
  402 PDF objects out of 1000 (max. 8388607)
  372 compressed objects within 4 object streams
