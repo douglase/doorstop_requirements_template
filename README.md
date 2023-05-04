@@ -7,6 +7,7 @@
 
 
 ## Features:
+* version controlled requirements tracking
 * Generates a graphviz diagram (see example at bottom of page) showing relations between requirements
 * Uses pandoc to translate doorstop generated html pages into github friendly markdown with links that work on github
 
