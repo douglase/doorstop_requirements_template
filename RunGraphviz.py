@@ -1,6 +1,5 @@
 print('generating graphviz diagram with graphviz for python')
 from graphviz import Digraph
-import yaml
 import numpy as np
 import doorstop
 import textwrap
@@ -29,7 +28,7 @@ for doc_n, document in  enumerate(tree.documents):
         if use_id:
             content=item.uid.value+"\n"
         if use_short_names:
-            content=content+str(item.data["short name"])
+            content=content+str(item.data.get("short name", ""))
         else:
             content=content+item.uid.value+"\n"+textwrap.fill(item.text,35)
         #skip items that have no back links, unless they are the first level

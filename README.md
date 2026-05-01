@@ -1,5 +1,5 @@
 [![DOI](https://zenodo.org/badge/68635117.svg)](https://zenodo.org/badge/latestdoi/68635117)
-[![Build Status](https://travis-ci.com/douglase/doorstop_requirements_template.svg?branch=main)](https://travis-ci.com/douglase/doorstop_requirements_template)
+[![build](https://github.com/douglase/doorstop_requirements_template/actions/workflows/build.yml/badge.svg)](https://github.com/douglase/doorstop_requirements_template/actions/workflows/build.yml)
 
 #  doorstop Requirements Template
 
@@ -35,12 +35,14 @@ expands published links to sublevels. To install this branch which has been test
 
 ### macOS:
 
-Example setup from command line in OS-X/macOS (with [homebrew](http://brew.sh/) and [pip](https://packaging.python.org/key_projects/#pip)):
+Example setup from command line in macOS (with [homebrew](http://brew.sh/) and Python 3.12+):
 
     brew install pandoc
     brew install graphviz
+    brew install python@3.12
     git clone https://github.com/douglase/doorstop_requirements_template
-    pip install graphviz
+    cd doorstop_requirements_template
+    pip3 install -r requirements.txt
 
 ### Linux
 
@@ -48,7 +50,7 @@ In Ubuntu or other Debian variant:
 
 	sudo apt-get install graphviz
 	sudo apt-get install pandoc
-	pip install graphviz
+	pip3 install -r requirements.txt
 
 Optional for editing in a spreadsheet: `sudo apt-get install libreoffice`
 Optional for generating PDF output: `sudo apt-get install texlive-latex-extra`
@@ -92,7 +94,7 @@ The template includes three levels which were created by the following commands:
 
 ## Continuous Integration 
 
-This repository has been setup to publish to Travis CI, see [CI setup guide](guides/CI-setup.md) and published to github pages, for the latest PDF, see: [blob/gh-pages/beamer.pdf](../gh-pages/beamer.pdf)
+This repository is built with GitHub Actions (see `.github/workflows/build.yml`) and published to GitHub Pages. For the latest PDF, see: [blob/gh-pages/beamer.pdf](../gh-pages/beamer.pdf)
 
 
 ## Flow of the scripts used to generate flowchart and human readible markdown files:

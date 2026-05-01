@@ -36,11 +36,15 @@ else
 fi
 
 
-python RunGraphviz.py
+python3 RunGraphviz.py
 
-python MakeLinksGitHubFriendly.py
+python3 MakeLinksGitHubFriendly.py
 
-#to make latex beamer slides, uncomment next three lines:
-make -f MakeBeamer
-cd dist
-pdflatex beamer.tex
+#to make latex beamer slides (optional, requires pdflatex):
+if command -v pdflatex >/dev/null 2>&1; then
+    make -f MakeBeamer
+    cd dist
+    pdflatex beamer.tex
+else
+    echo "pdflatex not found; skipping beamer PDF build"
+fi
