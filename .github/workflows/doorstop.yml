@@ -1,0 +1,72 @@
+name: Doorstop Example
+
+# Runs the installation and usage instructions from the README to confirm
+# that doorstop generates the example output from the template's sample
+# requirements whenever the repository is edited.
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  run-doorstop:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.9'
+
+      # Linux installation steps from the README:
+      #   sudo apt-get install graphviz
+      #   sudo apt-get install pandoc
+      # Plus texlive for the optional Beamer PDF output produced by
+      # doorstop_sync.sh.
+      - name: Install system dependencies
+        run: |
+          sudo apt-get -qq update
+          sudo apt-get install -y graphviz pandoc \
+            texlive-base texlive-latex-base texlive-latex-extra \
+            texlive-fonts-recommended texlive-fonts-extra
+
+      # Install doorstop from @douglase's branch (per the README "Installation"
+      # section) along with the Python dependencies declared by the template.
+      - name: Install doorstop and Python dependencies
+        run: |
+          python -m pip install --upgrade pip setuptools wheel
+          pip install -r requirements.txt
+          git clone --branch develop https://github.com/douglase/doorstop doorstop_lib
+          pip install ./doorstop_lib
+          rm -rf doorstop_lib
+
+      # Usage step from the README: run the template's sync script which
+      # imports the example CSVs and publishes the generated documents.
+      - name: Run doorstop_sync.sh to generate example output
+        run: |
+          chmod +x ./doorstop_sync.sh
+          ./doorstop_sync.sh
+
+      - name: Confirm example output was generated
+        run: |
+          echo "Generated files in dist/:"
+          ls -la dist/
+          test -f dist/index.markdown
+          test -f dist/L1.markdown
+          test -f dist/L2.markdown
+          test -f dist/L3.markdown
+          test -f Digraph_gv.png
+
+      - name: Upload generated example output
+        uses: actions/upload-artifact@v4
+        with:
+          name: doorstop-example-output
+          path: |
+            dist/
+            Digraph_gv.png
