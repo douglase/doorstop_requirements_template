@@ -46,6 +46,14 @@ jobs:
           pip install ./doorstop_lib
           rm -rf doorstop_lib
 
+      # Remove the example outputs that are committed to the repository so
+      # the verification step below can prove that doorstop_sync.sh actually
+      # regenerated them, rather than passing on stale committed files.
+      - name: Remove pre-existing example output
+        run: |
+          rm -rf dist
+          rm -f Digraph_gv.png Digraph.gv
+
       # Usage step from the README: run the template's sync script which
       # imports the example CSVs and publishes the generated documents.
       - name: Run doorstop_sync.sh to generate example output
@@ -53,7 +61,7 @@ jobs:
           chmod +x ./doorstop_sync.sh
           ./doorstop_sync.sh
 
-      - name: Confirm example output was generated
+      - name: Confirm example output was freshly generated
         run: |
           echo "Generated files in dist/:"
           ls -la dist/
@@ -61,7 +69,8 @@ jobs:
           test -f dist/L1.markdown
           test -f dist/L2.markdown
           test -f dist/L3.markdown
-          test -f Digraph_gv.png
+          # RunGraphviz.py renders to dist/Digraph_gv.png
+          test -f dist/Digraph_gv.png
 
       - name: Upload generated example output
         uses: actions/upload-artifact@v4
@@ -69,4 +78,3 @@ jobs:
           name: doorstop-example-output
           path: |
             dist/
-            Digraph_gv.png
