@@ -41,7 +41,7 @@ jobs:
       - name: Install doorstop and Python dependencies
         run: |
           python -m pip install --upgrade pip setuptools wheel
-          pip install -r requirements.txt
+          pip install --no-build-isolation -r requirements.txt
           git clone --branch develop https://github.com/douglase/doorstop doorstop_lib
           pip install ./doorstop_lib
           rm -rf doorstop_lib
