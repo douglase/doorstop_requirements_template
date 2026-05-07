@@ -2,30 +2,20 @@
 
 ORIGINAL_WD=$(pwd)
 
-# download and install doorstop
-
-git clone  --branch develop https://github.com/douglase/doorstop doorstop_lib
-
-cd doorstop_lib
-
-python setup.py install
-
-cd ${ORIGINAL_WD}
-
-#cleanup, otherwise breaks with multiple 
-rm -rf doorstop_lib
+# install Python dependencies (doorstop and graphviz python bindings)
+pip install -r requirements.txt
 
 #copy the gitinfo2 web-hook 
 #make executable
-chmod g+x ./example_hook.sh
-./example_hook.sh
+chmod g+x ./guides/example_hook.sh
+./guides/example_hook.sh
 
 pwd 
 
 ./doorstop_sync.sh 
 
 
-mkdir .git
+mkdir -p .git
 # get git parameters:
 
 # Copyright 2015 Brent Longborough

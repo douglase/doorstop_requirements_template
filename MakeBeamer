@@ -1,7 +1,11 @@
 #via http://stackoverflow.com/a/11030209
+# Converts doorstop-published HTML (dist/documents/*.html) into LaTeX Beamer
+# slides (dist/*_beamer.tex) using pandoc.  The master beamer.tex in dist/
+# \input{s} those generated files.
 TXTDIR=dist
-HTMLS=$(wildcard dist/*.html)
-MDS=$(patsubst %.html,%_beamer.tex,$(HTMLS))
+DOCDIR=dist/documents
+HTMLS=$(wildcard $(DOCDIR)/*.html)
+MDS=$(patsubst $(DOCDIR)/%.html,$(TXTDIR)/%_beamer.tex,$(HTMLS))
 
 #$(patsubst pattern,replacement,text)
 #Finds whitespace-separated words in text that match pattern and replaces them with replacement.
@@ -10,10 +14,7 @@ MDS=$(patsubst %.html,%_beamer.tex,$(HTMLS))
 
 all : $(MDS)
 
-#$(TXTDIR) :
-#       mkdir $(TXTDIR)
-
-$(TXTDIR)/%_beamer.tex : $(TXTDIR)/%.html $(TXTDIR)
+$(TXTDIR)/%_beamer.tex : $(DOCDIR)/%.html
 		pandoc -t beamer -f html+tex_math_dollars+tex_math_single_backslash $< -o $@
 		#preserves math,see: http://stackoverflow.com/questions/11338049/how-to-convert-html-with-mathjax-into-latex-using-pandoc#11461355
 

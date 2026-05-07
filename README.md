@@ -1,5 +1,5 @@
 [![DOI](https://zenodo.org/badge/68635117.svg)](https://zenodo.org/badge/latestdoi/68635117)
-[![Build Status](https://travis-ci.com/douglase/doorstop_requirements_template.svg?branch=main)](https://travis-ci.com/douglase/doorstop_requirements_template)
+[![CI](https://github.com/douglase/doorstop_requirements_template/actions/workflows/ci.yml/badge.svg)](https://github.com/douglase/doorstop_requirements_template/actions/workflows/ci.yml)
 
 #  doorstop Requirements Template
 
@@ -9,29 +9,23 @@
 ## Features:
 * version controlled requirements tracking
 * Generates a graphviz diagram (see example at bottom of page) showing relations between requirements
-* Uses pandoc to translate doorstop generated html pages into github friendly markdown with links that work on github
+* Uses doorstop's native Markdown publisher to generate GitHub-renderable markdown with working relative links
 
 ## Requirements
 
 * Bash
-* doorstop (Browning and Adams, 2014,
+* doorstop >= 3.1 (Browning and Adams, 2014,
   * http://dx.doi.org/10.4236/jsea.2014.73020):
   * https://doorstop.readthedocs.io/en/latest/#setup
-* pandoc: http://pandoc.org/installing.html
+* pandoc: http://pandoc.org/installing.html (required only for Beamer/LaTeX PDF output)
 * graphviz: https://pypi.python.org/pypi/graphviz
 * pdflatex (optional, for Beamer slide output)
 
 ## Installation
 
-### Note:
+Install Python dependencies:
 
-By default, doorstop only prints one level of links, so if a level is
-skipped, it won't be shown. @douglase's branch adds a setting which
-expands published links to sublevels. To install this branch which has been tested with the template:
-
-	git clone git@github.com:douglase/doorstop.git
-	cd doorstop
-	python setup.py develop
+    pip install -r requirements.txt
 
 ### macOS:
 
@@ -40,7 +34,7 @@ Example setup from command line in OS-X/macOS (with [homebrew](http://brew.sh/) 
     brew install pandoc
     brew install graphviz
     git clone https://github.com/douglase/doorstop_requirements_template
-    pip install graphviz
+    pip install -r requirements.txt
 
 ### Linux
 
@@ -48,10 +42,19 @@ In Ubuntu or other Debian variant:
 
 	sudo apt-get install graphviz
 	sudo apt-get install pandoc
-	pip install graphviz
+	pip install -r requirements.txt
 
 Optional for editing in a spreadsheet: `sudo apt-get install libreoffice`
 Optional for generating PDF output: `sudo apt-get install texlive-latex-extra`
+
+> **Note on `PUBLISH_GRANDCHILD_LINKS`:** The previous installation instructions
+> referenced a custom `douglase/doorstop` fork that added a
+> `PUBLISH_GRANDCHILD_LINKS` setting to display links spanning two or more
+> levels (e.g., L1 → L3 directly when an intermediate level is skipped).
+> Upstream doorstop v3.1 does not include this setting; it supports
+> `PUBLISH_CHILD_LINKS` (direct children) which covers the current template
+> data. If you need cross-level link display in future, consider opening a PR
+> against [doorstop-dev/doorstop](https://github.com/doorstop-dev/doorstop).
 	
 ## Usage
 To run the template (which generates a sample subset of post-facto requirements imagined for the PICTURE sounding rocket to image a debris disk [Chakrabarti et al. 2016](http://adsabs.harvard.edu/abs/2016JAI.....540004C), [Douglas et al 2016](http://adsabs.harvard.edu/abs/2016arXiv160700277D)):
@@ -69,21 +72,21 @@ The template includes three levels which were created by the following commands:
 * make and save edits to the .csv file related to the requirement of interest (i.e. sci_L2.csv)
 	* _this step can be done repeatedly and by users without the dependencies installed_ (by directly editing .csv files on github, for example)
 * run _./doorstop_sync.sh_
-* commit and push changes to view markdown [output in dist/ directory](dist/index.markdown)
+* commit and push changes to view markdown [output in dist/ directory](dist/L1.md)
 
 
 
 
-[Linked Requirements Documents and Traceability matrix](dist/index.markdown)
+[Linked Requirements Documents](dist/L1.md)
 
 
 ## Outputs of the template
 
 ### Published Documents:
 
--   [L1](dist/L1.markdown)
--   [L2](dist/L2.markdown)
--   [L3](dist/L3.markdown)
+-   [L1](dist/L1.md)
+-   [L2](dist/L2.md)
+-   [L3](dist/L3.md)
 
 
 ## Most recently committed flowchart:
@@ -92,13 +95,13 @@ The template includes three levels which were created by the following commands:
 
 ## Continuous Integration 
 
-This repository has been setup to publish to Travis CI, see [CI setup guide](guides/CI-setup.md) and published to github pages, for the latest PDF, see: [blob/gh-pages/beamer.pdf](../gh-pages/beamer.pdf)
+This repository uses GitHub Actions for CI/CD, see [CI setup guide](guides/CI-setup.md). On each push to `main`, the workflow regenerates all outputs and deploys them to the `gh-pages` branch. For the latest PDF, see: [blob/gh-pages/beamer.pdf](../gh-pages/beamer.pdf)
 
 
-## Flow of the scripts used to generate flowchart and human readible markdown files:
+## Flow of the scripts used to generate flowchart and human readable markdown files:
 
 ```
-                                   ./sync_doorstop
+                                   ./doorstop_sync.sh
 +---------------------------------------------------------------------------------------------+
 |   +-------------------------+                                                               |
 |   |INPUT                    |                                                               |
@@ -120,30 +123,24 @@ This repository has been setup to publish to Travis CI, see [CI setup guide](gui
 |         |   parses yaml files, resolves links and warns if unconnected requirements. |  |   |
 |         ++---------------------------------------------------------------------------+  |   |
 |          |                                                                              |   |
-|          |doorstop publish all ./dist                                                   |   |
+|          |doorstop publish all ./dist -m                                                |   |
 |          |                                                                              |   |
 |     +----v--------------------------------------------------------------------+         |   |
-|     | generates html document for each input document with hyperlinks.        |         |   |
+|     | publishes Markdown (dist/*.md) with parent/child links and GitHub-      |         |   |
+|     | compatible anchors. Also publishes HTML to dist/documents/ for Beamer.  |         |   |
 |     +-+-----------------------------------------------------------------------+         |   |
 |       |                                                                                 |   |
-|       | pandoc via MakeFile                                                             |   |
+|       | pandoc via MakeBeamer (HTML -> Beamer .tex, for PDF output only)               |   |
 |       |                                                                                 |   |
 |     +-+------------------------------------------------------------------------------+  |   |
-|     | converts html to markdown that can be parsed by github. Can also export LaTeX  |  |   |
-|     | or MSWord .docx. (http://pandoc.org).                                          |  |   |
+|     | converts HTML to LaTeX Beamer slides. (http://pandoc.org).                     |  |   |
 |     ++-------------------------------------------------------------------------------+  |   |
 |      |                                                                                  |   |
-|      |sed  and python                                                                   |   |
+|      |doorstop python API and Graphviz (via graphviz python module)                    |   |
 |      |                                                                                  |   |
-|    +-+--------------------------+                                                       |   |
-|    |hack to make relative links |                  doorstop python api and              |   |
-|    |work-on-github.-------------+                  Graphviz (via graphviz python module)|   |
-|    +----------------------------|                                                       |   |
-|                                                                                         |   |
-|                                                                                         |   |
 |    +-------------------------------------------------------------------------------------+  |
 |    |draws connections between each linked requirement and minimizes energy of network   ||  |
-|    |and exports requirements network asa png file.                                      ||  |
+|    |and exports requirements network as a png file.                                     ||  |
 |    +-------------------------------------------------------------------------------------+  |
 |                                                                                             |
 |                       made using http://asciiflow.com                                       |
