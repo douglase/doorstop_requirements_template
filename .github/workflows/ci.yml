@@ -34,15 +34,15 @@ jobs:
 
       - name: Install Python dependencies
         run: pip install -r requirements.txt
-      - name: make executable
+      - name: make deploy executable
         run: chmod +x deploy.sh
 
-        
       - name: Run doorstop sync and publish
         run: bash deploy.sh
 
-      - name: make executable
+      - name: make sync_tex executable
         run: chmod +x sync_tex.sh
+        
       - name: Build Beamer PDF
         run: bash sync_tex.sh ./dist beamer
 
