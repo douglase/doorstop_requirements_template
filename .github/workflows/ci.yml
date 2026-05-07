@@ -1,0 +1,66 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y \
+            texlive-base texlive-latex-base texlive-latex-extra \
+            texlive-fonts-recommended texlive-fonts-extra \
+            pandoc graphviz
+
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+      - name: make deploy executable
+        run: chmod +x deploy.sh
+
+      - name: Run doorstop sync and publish
+        run: bash deploy.sh
+
+      - name: make sync_tex executable
+        run: chmod +x sync_tex.sh
+        
+      - name: Build Beamer PDF
+        run: bash sync_tex.sh ./dist beamer
+
+      - name: Upload Pages artifact
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
+
+  deploy:
+    needs: build
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

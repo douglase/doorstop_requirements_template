@@ -3,17 +3,19 @@
 
 ### Intro
 
-Continuous integration tools such as Travis CI, allow real-time compilation of the final output PDF without local installation of dependencies.
+Continuous integration tools such as GitHub Actions allow real-time compilation of the final output PDF and automatic deployment to GitHub Pages, without local installation of dependencies.
 
-[.travis.yml](../.travis.yml) and [requirements.txt](requirements.txt)  defines the system for compilation and lists dependencies and calls [deploy.sh](../deploy.sh), which  installs the preferred version of the doorstop library and runs  _doorstop_sync.sh_ which updates the datebase and generates LaTeX and Markdown outputs them to a new branch called gh-pages, which you can configure to publish publically or not in your repository settings.
+[`.github/workflows/ci.yml`](../.github/workflows/ci.yml) and [`requirements.txt`](../requirements.txt) define the CI environment. The workflow installs system packages (texlive, pandoc, graphviz) and Python dependencies, then calls [`deploy.sh`](../deploy.sh), which runs `doorstop_sync.sh` to update the database and generate LaTeX and Markdown outputs. On pushes to `main`, the workflow deploys the `dist/` directory to GitHub Pages using the official [actions/deploy-pages](https://github.com/actions/deploy-pages) action.
 
-### setup for Travis CI on new copy of the template
+### Setup for GitHub Actions on a new copy of the template
 
-- create Travis CI account by configuring app: https://github.com/apps/travis-ci
-- link your requirements repository to account
-- add [github personal access token](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token), named `github_token` to repo setup on travis CI as shown in screenshot below
+1. Fork or copy this repository to your GitHub account.
+2. Go to **Settings → Pages** and set the **Source** to **GitHub Actions** (not "Deploy from a branch"). This is required for the official `actions/deploy-pages` deployment model.
+3. Push a commit to `main` to trigger the first CI run. The workflow will build the PDF and deploy the `dist/` directory to GitHub Pages.
 
+No separate CI service account, personal access token, or extra `GITHUB_TOKEN` permissions are required — the workflow uses the built-in `id-token: write` permission granted in the workflow file.
 
-![image](https://user-images.githubusercontent.com/1025951/113973312-f5664e80-97f0-11eb-8e14-45d2498cafb6.png)
-
-For [security](https://blog.travis-ci.com/2017-05-08-security-advisory), I created a new "machine" user , made it a collaborator on the repo, and used the machine user's token on Travis instead of my primary user's token. this isn't required.
+> **Migrating from Travis CI:** If you previously used `.travis.yml` with a
+> `github_token` secret, that configuration has been replaced by the GitHub
+> Actions workflow. The Travis CI integration can be safely disabled in your
+> Travis account settings.
