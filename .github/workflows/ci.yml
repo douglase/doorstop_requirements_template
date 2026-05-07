@@ -34,7 +34,10 @@ jobs:
 
       - name: Install Python dependencies
         run: pip install -r requirements.txt
-
+      - name: make executable
+        run: chmod +x deploy.sh
+        run: chmod +x sync_tex.sh
+        
       - name: Run doorstop sync and publish
         run: bash deploy.sh
 
