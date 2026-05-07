@@ -43,7 +43,7 @@ jobs:
           python -m pip install --upgrade pip setuptools wheel
           pip install --no-build-isolation -r requirements.txt
           git clone --branch develop https://github.com/douglase/doorstop doorstop_lib
-          pip install ./doorstop_lib
+          pip install --no-build-isolation ./doorstop_lib   # ← uses env's setuptools;
           rm -rf doorstop_lib
 
       # Remove the example outputs that are committed to the repository so
