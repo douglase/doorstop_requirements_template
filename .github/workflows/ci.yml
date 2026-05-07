@@ -36,11 +36,13 @@ jobs:
         run: pip install -r requirements.txt
       - name: make executable
         run: chmod +x deploy.sh
-        run: chmod +x sync_tex.sh
+
         
       - name: Run doorstop sync and publish
         run: bash deploy.sh
 
+      - name: make executable
+        run: chmod +x sync_tex.sh
       - name: Build Beamer PDF
         run: bash sync_tex.sh ./dist beamer
 
