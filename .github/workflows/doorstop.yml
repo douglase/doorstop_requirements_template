@@ -43,6 +43,11 @@ jobs:
           python -m pip install --upgrade pip setuptools wheel
           pip install --no-build-isolation -r requirements.txt
           git clone --branch develop https://github.com/douglase/doorstop doorstop_lib
+          # pyficache 0.2.x (required by doorstop) has a setup.py that calls
+          # __import__('pkg_resources'), which fails inside pip's build-isolated
+          # subprocess.  Pre-build it without isolation so pkg_resources is
+          # accessible from the current environment's setuptools.
+          pip install --no-build-isolation "pyficache>=0.2.3,<0.3"
           pip install --no-build-isolation ./doorstop_lib   # ← uses env's setuptools;
           rm -rf doorstop_lib
 
